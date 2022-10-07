@@ -1,4 +1,11 @@
 import Carousel from 'react-bootstrap/Carousel';
+import Button from 'react-bootstrap/Button';
+import Card from 'react-bootstrap/Card';
+import './HomeBody.css';
+import Frutos from './img/Frutos-secos.png';
+import Pan from './img/Pan-con-masa-madre.jpg';
+import Lechuga from './img/Lechuga-mantecosa.jpg';
+
 const HomeBody = () => {
     return (
         <main>
@@ -6,11 +13,11 @@ const HomeBody = () => {
                 <h1>La Exclusiva</h1>
             </section>
             <section>
-                <Carousel>
+                <Carousel className='primer slider'>
                     <Carousel.Item>
                         <img
                         className="d-block w-100"
-                        src="https://repositorio.iica.int/bitstream/handle/11324/9890/La%20hidropon%C3%ADa%2C%20una%20gota%20de%20esperanza..jpg?sequence=1&isAllowed=y"
+                        src={Lechuga}
                         alt=""
                         />
                         <Carousel.Caption>
@@ -19,7 +26,7 @@ const HomeBody = () => {
                             <Carousel.Item>
                                 <img
                                 className="d-block w-100"
-                                src="https://saboresymomentos.es/wp-content/uploads/2021/01/Pan-con-masa-madre-500x500.jpg"
+                                src={Pan}
                                 alt=""
                                 />
                                 <Carousel.Caption>
@@ -28,13 +35,140 @@ const HomeBody = () => {
                                     <Carousel.Item>
                                         <img
                                         className="d-block w-100"
-                                        src="C:\Users\monte\Documents\Imagenes pagina\Frutos-secos.jpg"
+                                        src={Frutos}
                                         alt=""
                                         />
                                         <Carousel.Caption>
                                         </Carousel.Caption>
                                         </Carousel.Item>
                                         </Carousel>
+            </section>
+
+            <div>
+
+            <h3>Seleccion de Productos generales</h3>
+
+            </div>
+            <hr />
+            <section>
+            <Carousel className='segundo slider'>
+      <Carousel.Item>
+        <table>
+            <td>
+      <Card style={{ width: '18rem' }}>
+      <Card.Img variant="top" src="holder.js/100px180" />
+      <Card.Body>
+        <Card.Title>Card Title</Card.Title>
+        <Card.Text>
+          Some quick example text to build on the card title and make up the
+          bulk of the card's content.
+        </Card.Text>
+        <Button variant="primary">Go somewhere</Button>
+      </Card.Body>
+    </Card>
+    </td>
+    <td>
+    <Card style={{ width: '18rem' }}>
+      <Card.Img variant="top" src="holder.js/100px180" />
+      <Card.Body>
+        <Card.Title>Card Title</Card.Title>
+        <Card.Text>
+          Some quick example text to build on the card title and make up the
+          bulk of the card's content.
+        </Card.Text>
+        <Button variant="primary">Go somewhere</Button>
+      </Card.Body>
+    </Card>
+    </td>
+    <td>
+    <Card style={{ width: '18rem' }}>
+      <Card.Img variant="top" src="holder.js/100px180" />
+      <Card.Body>
+        <Card.Title>Card Title</Card.Title>
+        <Card.Text>
+          Some quick example text to build on the card title and make up the
+          bulk of the card's content.
+        </Card.Text>
+        <Button variant="primary">Go somewhere</Button>
+      </Card.Body>
+    </Card>
+    </td>
+    <td>
+    <Card style={{ width: '18rem' }}>
+      <Card.Img variant="top" src="holder.js/100px180" />
+      <Card.Body>
+        <Card.Title>Card Title</Card.Title>
+        <Card.Text>
+          Some quick example text to build on the card title and make up the
+          bulk of the card's content.
+        </Card.Text>
+        <Button variant="primary">Go somewhere</Button>
+      </Card.Body>
+    </Card>
+    </td>
+    </table>
+        <Carousel.Caption>
+        </Carousel.Caption>
+      </Carousel.Item>
+      <Carousel.Item>
+        <table>
+            <td>
+      <Card style={{ width: '18rem' }}>
+      <Card.Img variant="top" src="holder.js/100px180" />
+      <Card.Body>
+        <Card.Title>Card Title</Card.Title>
+        <Card.Text>
+          Some quick example text to build on the card title and make up the
+          bulk of the card's content.
+        </Card.Text>
+        <Button variant="primary">Go somewhere</Button>
+      </Card.Body>
+    </Card>
+    </td>
+    <td>
+    <Card style={{ width: '18rem' }}>
+      <Card.Img variant="top" src="holder.js/100px180" />
+      <Card.Body>
+        <Card.Title>Card Title</Card.Title>
+        <Card.Text>
+          Some quick example text to build on the card title and make up the
+          bulk of the card's content.
+        </Card.Text>
+        <Button variant="primary">Go somewhere</Button>
+      </Card.Body>
+    </Card>
+    </td>
+    <td>
+    <Card style={{ width: '18rem' }}>
+      <Card.Img variant="top" src="holder.js/100px180" />
+      <Card.Body>
+        <Card.Title>Card Title</Card.Title>
+        <Card.Text>
+          Some quick example text to build on the card title and make up the
+          bulk of the card's content.
+        </Card.Text>
+        <Button variant="primary">Go somewhere</Button>
+      </Card.Body>
+    </Card>
+    </td>
+    <td>
+    <Card style={{ width: '18rem' }}>
+      <Card.Img variant="top" src="holder.js/100px180" />
+      <Card.Body>
+        <Card.Title>Card Title</Card.Title>
+        <Card.Text>
+          Some quick example text to build on the card title and make up the
+          bulk of the card's content.
+        </Card.Text>
+        <Button variant="primary">Go somewhere</Button>
+      </Card.Body>
+    </Card>
+    </td>
+    </table>
+        <Carousel.Caption>
+        </Carousel.Caption>
+      </Carousel.Item>
+    </Carousel>
             </section>
         </main>
     );

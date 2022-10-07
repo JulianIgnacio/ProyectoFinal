@@ -39,41 +39,38 @@ const Footer = () => {
                 </p>
               </div>
 
-              <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+              <div className="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
 
-                <h6 class="text-uppercase fw-bold mb-4">
+                <h6 className="text-uppercase fw-bold mb-4">
                   Productos
                 </h6>
                 <p>
-                  <a href="Verduras.html" class="text-reset">Productos Genrales</a>
+                  <a href="Verduras.html" className="text-reset">Productos Genrales</a>
                 </p>
                 <p>
-                  <a href="Verduras.html" class="text-reset">Verduleria</a>
+                  <a href="Verduras.html" className="text-reset">Verduleria</a>
                 </p>
                 <p>
-                  <a href="Semillas.html" class="text-reset">Semilleria</a>
+                  <a href="Semillas.html" className="text-reset">Semilleria</a>
                 </p>
                 <p>
-                  <a href="Pan.html" class="text-reset">Pananaderia</a>
-                </p>
-                <p>
-                <a href="Pan.html" class="text-reset">Carniceria</a>
+                  <a href="Pan.html" className="text-reset">Pananaderia</a>
                 </p>
               </div>
 
-              <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+              <div className="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
 
-                <h6 class="text-uppercase fw-bold mb-4">
+                <h6 className="text-uppercase fw-bold mb-4">
                     Quienes somos
                 </h6>
                 <p>
-                  <a href="Pagina quienes somos.html" class="text-reset">Quienes somos</a>
+                  <a href="Pagina quienes somos.html" className="text-reset">Quienes somos</a>
                 </p>
               </div>
 
-              <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+              <div className="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
 
-                <h6 class="text-uppercase fw-bold mb-4">Contacto</h6>
+                <h6 className="text-uppercase fw-bold mb-4">Contacto</h6>
                 <a href="Contacto.html" class="text-reset">Contactenos</a>
               </div>
             </div>
