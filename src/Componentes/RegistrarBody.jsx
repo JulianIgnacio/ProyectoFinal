@@ -1,9 +1,11 @@
 import React, { Component } from "react";
 
-export default class LoginBody extends Component {
+export default class register extends Component {
   constructor(props) {
     super(props);
     this.state = {
+      nombre: "",
+      apellido: "",
       email: "",
       password: "",
     };
@@ -11,8 +13,8 @@ export default class LoginBody extends Component {
   }
   handleSubmit(e) {
     e.preventDefault();
-    const { email, password } = this.state;
-    fetch("http://localhost:3000/login", {
+    const { nombre, apellido, email, password } = this.state;
+    fetch("http://localhost:3000/Register", {
       method: "POST",
       crossDomain: true,
       headers: {
@@ -21,26 +23,43 @@ export default class LoginBody extends Component {
         "Access-Control-Allow-Origin": "*",
       },
       body: JSON.stringify({
+        nombre,
         email,
+        apellido,
         password,
       }),
     })
       .then((res) => res.json())
       .then((data) => {
-        if (data.status === "ok") {
-          alert("login successful");
-          window.localStorage.setItem("token", data.data);
-          window.location.href = "./userDetails";
-        }
       });
   }
   render() {
     return (
       <form onSubmit={this.handleSubmit}>
-        <h3>Login</h3>
+        <h3>Sign Up</h3>
 
         <div className="mb-3">
-          <label>Email</label>
+          <label>nombre</label>
+          <input
+            type="text"
+            className="form-control"
+            placeholder="nombre"
+            onChange={(e) => this.setState({ nombre: e.target.value })}
+          />
+        </div>
+
+        <div className="mb-3">
+          <label>Apellido</label>
+          <input
+            type="text"
+            className="form-control"
+            placeholder="Apellido"
+            onChange={(e) => this.setState({ apellido: e.target.value })}
+          />
+        </div>
+
+        <div className="mb-3">
+          <label>Direccion de Email </label>
           <input
             type="email"
             className="form-control"
@@ -52,33 +71,20 @@ export default class LoginBody extends Component {
         <div className="mb-3">
           <label>Contraseña</label>
           <input
-            type="Contraseña"
+            type="password"
             className="form-control"
-            placeholder="Ingrese su contraseña"
+            placeholder="Ingrese su Contraseña"
             onChange={(e) => this.setState({ password: e.target.value })}
           />
         </div>
 
-        <div className="mb-3">
-          <div className="custom-control custom-checkbox">
-            <input
-              type="checkbox"
-              className="custom-control-input"
-              id="customCheck1"
-            />
-            <label className="custom-control-label" htmlFor="customCheck1">
-              Recuerdame
-            </label>
-          </div>
-        </div>
-
         <div className="d-grid">
           <button type="submit" className="btn btn-primary">
-            Ingresar
+            Registrar
           </button>
         </div>
         <p className="forgot-password text-right">
-          <a href="/Register">Registrarse</a>
+         <a href="/register">Registrado?</a>
         </p>
       </form>
     );

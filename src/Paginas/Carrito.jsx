@@ -1,15 +1,15 @@
+import CartBody from "../Componentes/CartBody";
 import NavBar from "../Componentes/navbar";
 import Footer from "../Componentes/footer";
-import QuienesSomosBody from "../Componentes/QuienesSomosBody";
 
-const quienesSomos = () => {
+const HomePage = () => {
     return (
         <>
         <NavBar />
-        <QuienesSomosBody/>
+        <CartBody />
         <Footer />
         </>
     );
 }
 
-export default quienesSomos;
+export default HomePage;

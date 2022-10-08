@@ -35,7 +35,7 @@ const Footer = () => {
                   <i className="fas fa-gem me-3"></i>La Exclusiva
                 </h6>
                 <p>
-                  <a href="Principal.html" className="text-reset">Inicio</a>
+                  <a href="http://localhost:3000" className="text-reset">Inicio</a>
                 </p>
               </div>
 
@@ -45,16 +45,13 @@ const Footer = () => {
                   Productos
                 </h6>
                 <p>
-                  <a href="Verduras.html" className="text-reset">Productos Genrales</a>
+                  <a href="/Verduleria" className="text-reset">Verduleria</a>
                 </p>
                 <p>
-                  <a href="Verduras.html" className="text-reset">Verduleria</a>
+                  <a href="/Semilleria" className="text-reset">Semilleria</a>
                 </p>
                 <p>
-                  <a href="Semillas.html" className="text-reset">Semilleria</a>
-                </p>
-                <p>
-                  <a href="Pan.html" className="text-reset">Pananaderia</a>
+                  <a href="/Panaderia" className="text-reset">Pananaderia</a>
                 </p>
               </div>
 
@@ -64,14 +61,14 @@ const Footer = () => {
                     Quienes somos
                 </h6>
                 <p>
-                  <a href="Pagina quienes somos.html" className="text-reset">Quienes somos</a>
+                  <a href="/QuienesSomos" className="text-reset">Quienes somos</a>
                 </p>
               </div>
 
               <div className="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
 
                 <h6 className="text-uppercase fw-bold mb-4">Contacto</h6>
-                <a href="Contacto.html" class="text-reset">Contactenos</a>
+                <a href="/Contacto" class="text-reset">Contactenos</a>
               </div>
             </div>
 
