@@ -36,14 +36,14 @@ export default class register extends Component {
   render() {
     return (
       <form onSubmit={this.handleSubmit}>
-        <h3>Sign Up</h3>
+        <h3>Registrarse</h3>
 
         <div className="mb-3">
-          <label>nombre</label>
+          <label>Nombre</label>
           <input
             type="text"
             className="form-control"
-            placeholder="nombre"
+            placeholder="Nombre"
             onChange={(e) => this.setState({ nombre: e.target.value })}
           />
         </div>

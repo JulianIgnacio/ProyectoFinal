@@ -52,7 +52,7 @@ export default class LoginBody extends Component {
         <div className="mb-3">
           <label>Contraseña</label>
           <input
-            type="Contraseña"
+            type="password"
             className="form-control"
             placeholder="Ingrese su contraseña"
             onChange={(e) => this.setState({ password: e.target.value })}
@@ -76,6 +76,7 @@ export default class LoginBody extends Component {
           <button type="submit" className="btn btn-primary">
             Ingresar
           </button>
+          
         </div>
         <p className="forgot-password text-right">
           <a href="/Register">Registrarse</a>
