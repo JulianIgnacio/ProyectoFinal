@@ -1,6 +1,8 @@
 import { AiFillFacebook } from "react-icons/ai";
 import { AiFillInstagram } from "react-icons/ai";
 import { BsTwitter } from "react-icons/bs";
+import "../Componentes/footer.css"
+import Logo from './img/Logo.jpg'
 
 const Footer = () => {
     return (
@@ -36,6 +38,9 @@ const Footer = () => {
                 </h6>
                 <p>
                   <a href="http://localhost:3000" className="text-reset">Inicio</a>
+                </p>
+                <p>
+                  <img src={Logo} alt="" className="imglogo"/>
                 </p>
               </div>
 

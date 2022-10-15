@@ -41,7 +41,7 @@ const NavBar = () => {
                   <Dropdown.Item href="/Register">Registrarse</Dropdown.Item>
                   </Dropdown.Menu>
                   </Dropdown>
-                  <Nav.Link href="/Carrito">
+                  <Nav.Link href="/Minisuper">
                     <BsCart/>
                     </Nav.Link>
           </Nav>

@@ -6,7 +6,8 @@ import Integral from "../Componentes/img/Integral-pan.jpg"
 import Centeno from "../Componentes/img/Pan-Centeno.jpg"
 
 
-const VerduleriaBody = () => {
+
+const PanaderiaBody = () => {
     return(
         <main>
         <h1>Panaderia </h1>
@@ -59,4 +60,4 @@ const VerduleriaBody = () => {
     );
 }
 
-export default VerduleriaBody;
+export default PanaderiaBody;
