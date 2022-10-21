@@ -1,6 +1,9 @@
 import axios from "axios";
 
 export const login = async () => {
-    const data = await axios.get("http://localhost:5500/login")
-    return data;
+    await axios.post("http://localhost:5500/login");
+}
+
+export const registeruser = async (user) => {
+    await axios.post("http://localhost:5500/register",user);
 }

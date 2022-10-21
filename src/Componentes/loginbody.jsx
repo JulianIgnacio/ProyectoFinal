@@ -1,18 +1,19 @@
 import React, { Component } from "react";
+import md5 from "md5";
 
-export default class LoginBody extends Component {
+ class LoginBody extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      email: "",
+      username: "",
       password: "",
     };
     this.handleSubmit = this.handleSubmit.bind(this);
   }
-  handleSubmit(e) {
-    e.preventDefault();
-    const { email, password } = this.state;
-    fetch("http://localhost:3000/Login", {
+  handleSubmit(event) {
+    event.preventDefault();
+    const { username, password } = this.state;
+     fetch("http://localhost:5500/login", {
       method: "POST",
       crossDomain: true,
       headers: {
@@ -21,16 +22,15 @@ export default class LoginBody extends Component {
         "Access-Control-Allow-Origin": "*",
       },
       body: JSON.stringify({
-        email,
+        username,
         password,
       }),
     })
       .then((res) => res.json())
       .then((data) => {
+        console.log(data, "userRegister");
         if (data.status === "ok") {
-          alert("login successful");
-          window.localStorage.setItem("token", data.data);
-          window.location.href = "./userDetails";
+          alert("Login exitoso");
         }
       });
   }
@@ -40,12 +40,12 @@ export default class LoginBody extends Component {
         <h3>Login</h3>
 
         <div className="mb-3">
-          <label>Email</label>
+          <label>Usuario</label>
           <input
-            type="email"
+            type="text"
             className="form-control"
-            placeholder="Ingrese su Email"
-            onChange={(e) => this.setState({ email: e.target.value })}
+            placeholder="Ingrese su Usuario"
+            onChange={(event) => this.setState({ username: event.target.value })}
           />
         </div>
 
@@ -55,21 +55,8 @@ export default class LoginBody extends Component {
             type="password"
             className="form-control"
             placeholder="Ingrese su contraseña"
-            onChange={(e) => this.setState({ password: e.target.value })}
+            onChange={(event) => this.setState({ password: md5(event.target.value) })}
           />
-        </div>
-
-        <div className="mb-3">
-          <div className="custom-control custom-checkbox">
-            <input
-              type="checkbox"
-              className="custom-control-input"
-              id="customCheck1"
-            />
-            <label className="custom-control-label" htmlFor="customCheck1">
-              Recuerdame
-            </label>
-          </div>
         </div>
 
         <div className="d-grid">
@@ -85,3 +72,5 @@ export default class LoginBody extends Component {
     );
   }
 }
+
+export default LoginBody;

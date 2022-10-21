@@ -1,20 +1,19 @@
 import React, { Component } from "react";
+import md5 from "md5";
 
-export default class register extends Component {
+class RegistrarBody  extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      nombre: "",
-      apellido: "",
-      email: "",
+      username: "",
       password: "",
     };
     this.handleSubmit = this.handleSubmit.bind(this);
   }
-  handleSubmit(e) {
-    e.preventDefault();
-    const { nombre, apellido, email, password } = this.state;
-    fetch("http://localhost:3000/Register", {
+  handleSubmit(event) {
+    event.preventDefault();
+    const { username, password } = this.state;
+    fetch("http://localhost:5500/register", {
       method: "POST",
       crossDomain: true,
       headers: {
@@ -23,48 +22,29 @@ export default class register extends Component {
         "Access-Control-Allow-Origin": "*",
       },
       body: JSON.stringify({
-        nombre,
-        email,
-        apellido,
+        username,
         password,
       }),
     })
       .then((res) => res.json())
       .then((data) => {
+        alert("usuario registrado correctamente");
       });
   }
-  render() {
+  render () {
     return (
+      
       <form onSubmit={this.handleSubmit}>
         <h3>Registrarse</h3>
 
         <div className="mb-3">
-          <label>Nombre</label>
+          <label>Nombre de usuario</label>
           <input
             type="text"
             className="form-control"
-            placeholder="Nombre"
-            onChange={(e) => this.setState({ nombre: e.target.value })}
-          />
-        </div>
-
-        <div className="mb-3">
-          <label>Apellido</label>
-          <input
-            type="text"
-            className="form-control"
-            placeholder="Apellido"
-            onChange={(e) => this.setState({ apellido: e.target.value })}
-          />
-        </div>
-
-        <div className="mb-3">
-          <label>Direccion de Email </label>
-          <input
-            type="email"
-            className="form-control"
-            placeholder="Ingrese su Email"
-            onChange={(e) => this.setState({ email: e.target.value })}
+            placeholder="Ingrese su Nombre de Usuario"
+            name="username"
+            onChange={(event) => this.setState({ username: event.target.value })}
           />
         </div>
 
@@ -74,7 +54,8 @@ export default class register extends Component {
             type="password"
             className="form-control"
             placeholder="Ingrese su Contraseña"
-            onChange={(e) => this.setState({ password: e.target.value })}
+            name="password"
+            onChange={(event) => this.setState({ password: md5(event.target.value) })}
           />
         </div>
 
@@ -84,9 +65,11 @@ export default class register extends Component {
           </button>
         </div>
         <p className="forgot-password text-right">
-         <a href="/register">Registrado?</a>
+         <a href="/Login">Registrado?</a>
         </p>
       </form>
     );
   }
 }
+
+export default RegistrarBody;

@@ -30,7 +30,7 @@ const Productos = () => {
             </p>
           </div>
 
-          <Button variant="primary" href='/Carrito' onClick={() => AddItemToCart(product)}>Agregar al carrito</Button>
+          <Button variant="primary" onClick={() => AddItemToCart(product)}>Agregar al carrito</Button>
         </div>
       ))}
     </div>

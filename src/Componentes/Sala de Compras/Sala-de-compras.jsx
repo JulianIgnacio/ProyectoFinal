@@ -4,7 +4,7 @@ import Products from "../Productos/Productos";
 
 const Compras = () => {
   return (
-    <div className="home">
+    <div className>
       <Cart />
       <Products />
     </div>
