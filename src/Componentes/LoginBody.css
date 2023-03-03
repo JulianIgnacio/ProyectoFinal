@@ -1,0 +1,15 @@
+.mb-3 {
+    width: 500px;
+}
+.d-grid{
+    height: 30px;
+    width: 250px;
+    margin-bottom: 15px;
+}
+form {
+    border: 1px solid black;
+    padding-right: 250px;
+    padding-left: 200px;
+    margin-left: 250px;
+    margin-right: 250px;
+}

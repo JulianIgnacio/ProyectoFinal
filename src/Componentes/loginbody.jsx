@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import "../Componentes/LoginBody.css"
 import md5 from "md5";
 
  class LoginBody extends Component {
@@ -36,10 +37,11 @@ import md5 from "md5";
   }
   render() {
     return (
+      <main>
       <form onSubmit={this.handleSubmit}>
         <h3>Login</h3>
 
-        <div className="mb-3">
+        <div className="mb-3" >
           <label>Usuario</label>
           <input
             type="text"
@@ -60,6 +62,7 @@ import md5 from "md5";
         </div>
 
         <div className="d-grid">
+
           <button type="submit" className="btn btn-primary">
             Ingresar
           </button>
@@ -69,6 +72,7 @@ import md5 from "md5";
           <a href="/Register">Registrarse</a>
         </p>
       </form>
+      </main>
     );
   }
 }
